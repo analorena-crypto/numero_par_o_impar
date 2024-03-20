@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+/**
+ * This program checks whether a given integer is even or odd.
+ */
+public class EvenOddChecker {
+    
+    /**
+     * Checks whether a number is even or odd.
+     * 
+     * @param number The integer to be checked.
+     * @return "even" if the number is even, "odd" if it's odd.
+     */
+    public static String checkEvenOdd(int number) {
+        if (number % 2 == 0) {
+            return "even";
+        } else {
+            return "odd";
+        }
+    }
+    
+    /**
+     * Main method to take user input and display whether the number is even or odd.
+     * 
+     * @param args Command-line arguments (not used).
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+        
+        String result = checkEvenOdd(number);
+        System.out.println("The number is " + result + ".");
+        
+        scanner.close();
+    }
+}
